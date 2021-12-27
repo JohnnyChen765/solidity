@@ -1,0 +1,1 @@
+- Brownie run scripts/deploy.py --network rinkeby to deploy on a testnetwork

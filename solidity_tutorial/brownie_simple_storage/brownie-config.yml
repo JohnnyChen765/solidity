@@ -1,0 +1,4 @@
+dotenv: .env
+wallets:
+  # ALWAYS USE TEST KEYS
+  from_key: ${PRIVATE_KEY}
