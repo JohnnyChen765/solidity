@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "solidity_tutorial"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+py-solc-x = "^1.1.1"
+web3 = "^5.25.0"
+
+[tool.poetry.dev-dependencies]
+isort = "^5.9.2"
+pytest = "^6.2.4"
+pytest-cov = "^2.8"
+black = "^21.7b0"
+flake8 = "^3.9.2"
+mypy = "^0.910"
+ipdb = "^0.13.9"
+
+[tool.pytest.ini_options]
+addopts = [
+    "--cov=src",
+    "--cov-report=term-missing",
+    "--cov-branch",
+]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 89
