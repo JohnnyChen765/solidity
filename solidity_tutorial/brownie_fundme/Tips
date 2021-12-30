@@ -2,3 +2,7 @@
 
 # Use a mainnet-fork as for local development testing
 -  brownie networks add development mainnet-fork-dev cmd=ganache-cli host=http://127.0.0.1 fork=https://eth-mainnet.alchemyapi.io/v2/OK2kE86P-VumalOg9gTEPQ7SSvxiKLSr accounts=10 mnemonic=brownie port=8545
+
+# https://github.com/brownie-mix
+- you can pull/clone a template such as chainlink-mix by using the command
+"brownie bake <repo_name>"
