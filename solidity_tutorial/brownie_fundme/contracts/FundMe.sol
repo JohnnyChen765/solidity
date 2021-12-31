@@ -12,6 +12,7 @@ contract FundMe {
     address[] public funders;
     address public owner;
     AggregatorV3Interface public priceFeed;
+    int256[] minted;
 
     // if you're following along with the freecodecamp video
     // Please see https://github.com/PatrickAlphaC/fund_me
@@ -19,9 +20,12 @@ contract FundMe {
     constructor(address _priceFeed) public {
         priceFeed = AggregatorV3Interface(_priceFeed);
         owner = msg.sender;
+        minted = [0];
     }
 
     function fund() public payable {
+        minted.push(0);
+        // require(minted.length == 0, "full");
         uint256 mimimumUSD = 50 * 10**18;
         require(
             getConversionRate(msg.value) >= mimimumUSD,
